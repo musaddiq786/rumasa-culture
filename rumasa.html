@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RUMASA CUTURE | Wear It. Flaunt It. Return It.</title>
+  <meta name="description" content="RUMASA CUTURE – premium bridal & party wear rental. Wear it. Flaunt it. Return it. Book designer outfits without the heavy price tag." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="RUMASA CUTURE" />
+  <meta property="og:description" content="Premium bridal & party wear rental. Wear it. Flaunt it. Return it." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="poster.jpg" />
+  <meta property="og:url" content="https://rumasaculture.com/" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root { --maroon: #7b2c2c; --maroon-2: #5a1f1f; --black: #111; --gold: #d4af37; --blush: #fff5f3; --ink: #1a1a1a; --muted: #6b7280; --ring: rgba(123, 44, 44, 0.45); --card: #ffffff; --shadow: 0 6px 30px rgba(0,0,0,0.08);} 
+    * { box-sizing: border-box }
+    html { scroll-behavior: smooth }
+    body { margin: 0; font-family: 'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: var(--ink); background: #fff; line-height: 1.55; }
+    header { position: sticky; top: 0; z-index: 60; background: rgba(17,17,17,0.9); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: space-between; padding: .8rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.06);} 
+    .brand { display: flex; align-items: center; gap: .75rem; color: #fff; text-decoration: none } .brand img { height: 44px; width: 44px; object-fit: cover; border-radius: 10px; } .brand span { font-family: 'Playfair Display', serif; letter-spacing: .5px; font-size: 1.05rem }
+    nav { display: flex; align-items: center; gap: 1rem } nav a { color: #fff; text-decoration: none; font-weight: 600; font-size: .95rem; padding: .5rem .75rem; border-radius: 10px; opacity: .9; } nav a:hover, nav a:focus-visible { background: rgba(255,255,255,.08); opacity: 1; outline: none } .cta-btn { background: var(--gold); color: #111 !important; font-weight: 800 }
+    .menu-toggle { display: none } .hamb { display: none; color: #fff; font-size: 1.4rem; }
+    @media (max-width: 900px) { nav { position: fixed; inset: 60px 0 auto 0; background: #111; padding: 1rem; display: none; flex-direction: column; } nav.open { display: flex } .hamb { display: inline-flex } }
+    .hero { position: relative; min-height: 92vh; display: grid; place-items: center; text-align: center; color: #fff; overflow: clip; background: #000; }
+    .hero::before{ content: ""; position: absolute; inset: 0; background: url('poster.jpg') center/cover no-repeat; filter: brightness(.65); transform: scale(1.02); will-change: transform; }
+    .hero::after{ content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.6)); }
+    .hero-inner { position: relative; padding: 0 1rem; max-width: 1100px; } .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 4rem); letter-spacing: 1.5px; margin-bottom: .6rem } .hero p { font-size: clamp(1rem, 2.2vw, 1.25rem); opacity: .95 } .hero-actions { margin-top: 1.4rem; display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap }
+    .btn { appearance: none; border: none; cursor: pointer; padding: .9rem 1.1rem; border-radius: 14px; font-weight: 800; letter-spacing: .2px; box-shadow: var(--shadow); transition: transform .15s ease, box-shadow .2s ease, background .2s ease; } .btn:hover { transform: translateY(-1px) } .btn-primary { background: var(--gold); color: #111 } .btn-outline { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.4) }
+    .section { padding: 4rem 1rem; } .container { max-width: 1200px; margin: 0 auto } .section h2 { font-family: 'Playfair Display', serif; color: var(--maroon); margin: 0 0 .6rem; font-size: clamp(1.6rem, 3.2vw, 2.2rem) } .section p.lead { color: var(--muted); max-width: 850px }
+    .usp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1.5rem } .card-usp { background: var(--card); border: 1px solid #eee; border-radius: 16px; padding: 1.25rem; box-shadow: var(--shadow) } .card-usp h3 { margin: .6rem 0 .3rem; font-size: 1.05rem } .card-usp p { color: var(--muted); font-size: .95rem } .card-usp i { font-size: 1.2rem; color: var(--maroon) }
+    @media (max-width: 900px){ .usp-grid{ grid-template-columns: 1fr 1fr } } @media (max-width: 560px){ .usp-grid{ grid-template-columns: 1fr } }
+    .toolbar { display: flex; gap: .6rem; flex-wrap: wrap; align-items: center; margin-top: 1rem } .toolbar input, .toolbar select { padding: .7rem .8rem; border-radius: 12px; border: 1px solid #ddd; min-width: 170px; outline: none } .toolbar input:focus, .toolbar select:focus { box-shadow: 0 0 0 4px var(--ring); border-color: var(--maroon) }
+    .collection { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1.25rem; margin-top: 1.5rem } @media (max-width: 1100px){ .collection{ grid-template-columns: repeat(3, 1fr) } } @media (max-width: 800px){ .collection{ grid-template-columns: repeat(2, 1fr) } } @media (max-width: 520px){ .collection{ grid-template-columns: 1fr } }
+    .card { background: var(--card); border: 1px solid #eee; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); transition: transform .25s ease, box-shadow .25s ease; position: relative; } .card:hover { transform: translateY(-3px) } .card img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block } .tag { position: absolute; top: 10px; left: 10px; background: #fff; color: var(--maroon); padding: .35rem .6rem; border-radius: 999px; font-size: .72rem; font-weight: 800; border: 1px solid #eee } .card-body { padding: .9rem } .card h3 { font-size: 1.05rem; margin: .2rem 0 .5rem } .price { display: flex; align-items: baseline; gap: .35rem; font-weight: 800 } .price .rent { color: var(--maroon) } .price .mrp { color: #9ca3af; text-decoration: line-through; font-size: .85rem } .meta { color: var(--muted); font-size: .9rem; margin-top: .25rem } .card-actions { display: flex; gap: .5rem; margin-top: .7rem } .btn-sm { padding: .55rem .7rem; font-weight: 700; border-radius: 10px }
+    .how-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1.2rem } .step { background: #fff; border: 1px solid #eee; border-radius: 16px; padding: 1.2rem; box-shadow: var(--shadow) } .step h3{ margin: .6rem 0 .2rem; font-size: 1.05rem } .step p{ color: var(--muted) } .step i{ color: var(--maroon) } @media (max-width: 900px){ .how-grid{ grid-template-columns: 1fr 1fr } } @media (max-width: 560px){ .how-grid{ grid-template-columns: 1fr } }
+    .modal { position: fixed; inset: 0; display: none; place-items: center; background: rgba(0,0,0,.6); z-index: 70 } .modal.open { display: grid } .modal-card { background: #fff; width: min(760px, 92vw); border-radius: 16px; padding: 1.2rem; max-height: 85vh; overflow: auto } .modal-card h3{ margin-top: .2rem } .size-table { width: 100%; border-collapse: collapse; margin-top: .8rem } .size-table th, .size-table td { border: 1px solid #eee; padding: .6rem; text-align: center } .size-table th { background: #fafafa }
+    .form { max-width: 760px; margin: 1.2rem auto 0; display: grid; gap: .8rem } .form input, .form select, .form textarea { padding: .8rem .9rem; border: 1px solid #ddd; border-radius: 12px; outline: none; font-size: 1rem } .form input:focus, .form select:focus, .form textarea:focus { box-shadow: 0 0 0 4px var(--ring); border-color: var(--maroon) } .form .row { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem } @media (max-width: 640px){ .form .row{ grid-template-columns: 1fr } } .note { color: var(--muted); font-size: .92rem } .summary { background: #fff; border: 1px solid #eee; border-radius: 16px; padding: 1rem; box-shadow: var(--shadow); margin-top: .6rem }
+    .faq { max-width: 920px; margin: 1.2rem auto 0 } .faq details { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: .9rem 1rem; margin-bottom: .6rem; box-shadow: var(--shadow) } .faq summary { cursor: pointer; font-weight: 700 } .faq p { color: var(--muted); margin-top: .4rem }
+    footer { background: #111; color: #fff; padding: 2.2rem 1rem; margin-top: 3rem } .foot { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem } .foot h4 { margin: 0 0 .6rem } .link { color: #fff; opacity: .9; text-decoration: none } .link:hover { text-decoration: underline } .credits { text-align: center; color: #cbd5e1; font-size: .9rem; margin-top: 1rem }
+    .badge { display: inline-flex; align-items: center; gap: .4rem; background: var(--blush); color: var(--maroon); padding: .35rem .6rem; border: 1px solid #f3e2df; border-radius: 999px; font-size: .78rem; font-weight: 800 } .hidden { display: none !important }
+    .whatsapp, .to-top { position: fixed; right: 16px; z-index: 80; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 999px; box-shadow: var(--shadow); } .whatsapp { bottom: 16px; background: #25D366; color: #fff } .to-top { bottom: 72px; background: #fff; border: 1px solid #eee } .to-top i { color: #111 }
+    .reveal { opacity: 0; transform: translateY(12px); transition: opacity .5s ease, transform .5s ease } .reveal.show { opacity: 1; transform: translateY(0) }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="#top" aria-label="RUMASA CUTURE home">
+      <img src="main.jpg" alt="RUMASA CUTURE logo" loading="eager" />
+      <span>RUMASA CUTURE</span>
+    </a>
+    <button class="hamb" id="hamb" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <nav id="nav">
+      <a href="#collection">Collection</a>
+      <a href="#about">About</a>
+      <a href="#how">How It Works</a>
+      <a href="#booking" class="cta-btn">Book Now</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="top" role="banner" aria-label="Hero">
+    <div class="hero-inner reveal">
+      <span class="badge"><i class="fa-solid fa-star"></i> New arrivals just dropped</span>
+      <h1>Wear It. Flaunt It. Return It.</h1>
+      <p>Premium bridal & party wear rentals for women — timeless tradition with modern elegance. Luxury without commitment.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#collection" aria-label="Browse Collection">Browse Collection</a>
+        <a class="btn btn-outline" href="#booking" aria-label="Book your outfit">Book Your Outfit</a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="reveal">About Us</h2>
+      <p class="lead reveal">RUMASA CUTURE is a premium bridal & party wear rental brand for women, blending timeless tradition with modern elegance. Why buy when you can wear luxury without commitment?</p>
+      <div class="usp-grid">
+        <div class="card-usp reveal"><i class="fa-solid fa-indian-rupee-sign"></i><h3>Affordable Luxury</h3><p>Designer looks at a fraction of the price.</p></div>
+        <div class="card-usp reveal"><i class="fa-solid fa-shirt"></i><h3>Hygiene Assured</h3><p>Professional dry‑cleaning after every rental.</p></div>
+        <div class="card-usp reveal"><i class="fa-solid fa-truck-fast"></i><h3>On‑time Delivery</h3><p>Doorstep delivery & easy returns.</p></div>
+        <div class="card-usp reveal"><i class="fa-solid fa-ruler-combined"></i><h3>Perfect Fit</h3><p>Free minor alterations on select outfits.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="collection">
+    <div class="container">
+      <h2 class="reveal">Our Collection</h2>
+      <div class="toolbar reveal" role="region" aria-label="Collection filters">
+        <input type="search" id="search" placeholder="Search outfits (e.g., maroon, sequin)" aria-label="Search outfits">
+        <select id="filterCategory" aria-label="Filter by category">
+          <option value="all">All Categories</option>
+          <option value="bridal">Bridal</option>
+          <option value="party">Party Wear</option>
+        </select>
+        <select id="sort" aria-label="Sort by price">
+          <option value="default">Sort: Featured</option>
+          <option value="asc">Price: Low to High</option>
+          <option value="desc">Price: High to Low</option>
+        </select>
+      </div>
+
+      <div class="collection" id="grid" aria-live="polite">
+        <article class="card reveal" data-name="maroon bridal lehenga" data-category="bridal" data-price="4999">
+          <span class="tag">Bridal</span>
+          <img src="maroon bridal lehenga.jpg" alt="Maroon bridal lehenga with intricate embroidery" loading="lazy">
+          <div class="card-body">
+            <h3>Maroon Bridal Lehenga</h3>
+            <div class="price"><span class="rent">₹4,999</span> <span class="mrp">₹28,000</span></div>
+            <div class="meta">Classic design • Hand embroidery</div>
+            <div class="card-actions">
+              <button class="btn btn-sm btn-primary" data-action="quick" aria-label="Quick view Maroon Bridal Lehenga">Quick View</button>
+              <button class="btn btn-sm" data-action="wishlist" aria-label="Add Maroon Bridal Lehenga to wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal" data-name="golden sequin lehenga" data-category="bridal" data-price="5499">
+          <span class="tag">Bridal</span>
+          <img src="golden sequin lehenga.jpg" alt="Golden sequin lehenga shining for reception nights" loading="lazy">
+          <div class="card-body">
+            <h3>Golden Sequin Lehenga</h3>
+            <div class="price"><span class="rent">₹5,499</span> <span class="mrp">₹32,000</span></div>
+            <div class="meta">Glam party • Full sequin</div>
+            <div class="card-actions">
+              <button class="btn btn-sm btn-primary" data-action="quick">Quick View</button>
+              <button class="btn btn-sm" data-action="wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal" data-name="peach party dress" data-category="party" data-price="3999">
+          <span class="tag">Party Wear</span>
+          <img src="peach party dress.jpg" alt="Peach party dress in soft pastel hue" loading="lazy">
+          <div class="card-body">
+            <h3>Peach Party Dress</h3>
+            <div class="price"><span class="rent">₹3,999</span> <span class="mrp">₹18,500</span></div>
+            <div class="meta">Day function • Light & airy</div>
+            <div class="card-actions">
+              <button class="btn btn-sm btn-primary" data-action="quick">Quick View</button>
+              <button class="btn btn-sm" data-action="wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal" data-name="royal blue embroidered gown" data-category="party" data-price="3499">
+          <span class="tag">Party Wear</span>
+          <img src="royal blue gown.jpg" alt="Royal blue embroidered gown with rich detailing" loading="lazy">
+          <div class="card-body">
+            <h3>Royal Blue Embroidered Gown</h3>
+            <div class="price"><span class="rent">₹3,499</span> <span class="mrp">₹16,000</span></div>
+            <div class="meta">Evening wear • Elegant</div>
+            <div class="card-actions">
+              <button class="btn btn-sm btn-primary" data-action="quick">Quick View</button>
+              <button class="btn btn-sm" data-action="wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="note reveal">Tip: Use the search & filters above to quickly find your dream outfit. Tap the heart to save items to your wishlist (stored on your device).</p>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="container">
+      <h2 class="reveal">How It Works</h2>
+      <div class="how-grid">
+        <div class="step reveal"><i class="fa-solid fa-magnifying-glass"></i> <h3>1. Browse</h3><p>Explore our elegant collection.</p></div>
+        <div class="step reveal"><i class="fa-solid fa-calendar-check"></i> <h3>2. Book</h3><p>Select your outfit and reserve it.</p></div>
+        <div class="step reveal"><i class="fa-solid fa-camera-retro"></i> <h3>3. Flaunt</h3><p>Shine at your event with confidence.</p></div>
+        <div class="step reveal"><i class="fa-solid fa-recycle"></i> <h3>4. Return</h3><p>We handle the dry cleaning!</p></div>
+      </div>
+      <div style="margin-top:1rem">
+        <button class="btn" id="openSizeGuide"><i class="fa-solid fa-ruler"></i> Size Guide</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="booking">
+    <div class="container">
+      <h2 class="reveal">Book Your Outfit</h2>
+      <form class="form" action="https://formspree.io/f/xovnjgzo" method="POST" id="bookForm">
+        <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
+        <div class="row">
+          <input type="text" name="name" placeholder="Your Full Name" required>
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+        </div>
+        <div class="row">
+          <input type="email" name="email" placeholder="Email Address" required>
+          <select name="category" id="formCategory" required>
+            <option value="">Select Category</option>
+            <option value="bridal">Bridal</option>
+            <option value="party">Party Wear</option>
+          </select>
+        </div>
+        <div class="row">
+          <select name="outfit" id="formOutfit" required>
+            <option value="">Select Outfit</option>
+          </select>
+          <div class="row" style="grid-template-columns: 1fr 1fr; gap:.6rem; padding:0">
+            <input type="date" name="rental_date" id="rentalDate" required>
+            <select name="days" id="days" required>
+              <option value="1">1 day</option>
+              <option value="3">3 days</option>
+              <option value="5">5 days</option>
+            </select>
+          </div>
+        </div>
+        <textarea name="message" rows="4" placeholder="Measurements / Notes (bust, waist, hips)" aria-label="Measurements or notes"></textarea>
+        <input type="hidden" name="_subject" value="New Booking Request from RUMASA CUTURE">
+        <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you.html">
+        <div class="summary" id="priceSummary" aria-live="polite">
+          <strong>Summary:</strong>
+          <div>Rent: <span id="sumRent">₹0</span> • Refundable Deposit: <span id="sumDep">₹0</span> • Total Payable: <span id="sumTotal">₹0</span></div>
+          <small class="note">* Deposit is fully refundable on timely return & in original condition.</small>
+        </div>
+        <div class="row">
+          <button type="button" class="btn btn-outline" id="checkAvailability"><i class="fa-regular fa-clock"></i> Check Availability</button>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Submit Booking Request</button>
+        </div>
+        <p class="note">Thank you for choosing us! We typically respond within 24 hours.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <h2 class="reveal">FAQs</h2>
+      <div class="faq">
+        <details class="reveal"><summary>What is included in the rental?</summary><p>Outfit and standard accessories if mentioned. Dry cleaning is on us after return.</p></details>
+        <details class="reveal"><summary>Do you offer alterations?</summary><p>Yes, minor alterations are complimentary on select styles. Share your measurements in the form.</p></details>
+        <details class="reveal"><summary>What if I damage the outfit?</summary><p>Minor wear is okay. Significant damage may incur repair fees deducted from the deposit.</p></details>
+        <details class="reveal"><summary>How does the deposit work?</summary><p>Deposit is collected before dispatch and fully refunded after QC on timely return.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="foot">
+      <div>
+        <h4>RUMASA CUTURE</h4>
+        <p>Contact us at <strong>info@rumasaculture.com</strong><br>Phone: <strong>+91-87880 21245</strong></p>
+        <p>Address: Your Studio Address, City, India</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p><a class="link" href="#collection">Collection</a></p>
+        <p><a class="link" href="#booking">Booking</a></p>
+        <p><a class="link" href="#faq">FAQs</a></p>
+      </div>
+      <div>
+        <h4>Policies</h4>
+        <p><a class="link" href="#" onclick="alert('Add your Terms & Conditions page');return false;">Terms</a></p>
+        <p><a class="link" href="#" onclick="alert('Add your Privacy Policy page');return false;">Privacy</a></p>
+      </div>
+    </div>
+    <p class="credits">© <span id="year"></span> RUMASA CUTURE. All rights reserved.</p>
+  </footer>
+
+  <div class="modal" id="sizeModal" aria-hidden="true" role="dialog" aria-label="Size guide">
+    <div class="modal-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:.6rem">
+        <h3>Women's Size Guide (inches)</h3>
+        <button class="btn btn-sm" id="closeSize" aria-label="Close size guide">Close</button>
+      </div>
+      <table class="size-table">
+        <thead><tr><th>Size</th><th>Bust</th><th>Waist</th><th>Hip</th></tr></thead>
+        <tbody>
+          <tr><td>XS</td><td>32</td><td>25</td><td>35</td></tr>
+          <tr><td>S</td><td>34</td><td>27</td><td>37</td></tr>
+          <tr><td>M</td><td>36</td><td>29</td><td>39</td></tr>
+          <tr><td>L</td><td>38</td><td>31</td><td>41</td></tr>
+          <tr><td>XL</td><td>40</td><td>33</td><td>43</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Tip: If between sizes, choose the larger size for comfort.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="quickModal" aria-hidden="true" role="dialog" aria-label="Quick view">
+    <div class="modal-card" id="quickContent"></div>
+  </div>
+
+  <a class="whatsapp" id="wa" href="https://wa.me/918788021245?text=Hi%20RUMASA%20CUTURE%2C%20I%20want%20to%20rent%20an%20outfit" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <button class="to-top hidden" id="toTop" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "RUMASA CUTURE",
+    "image": "poster.jpg",
+    "url": "https://rumasaculture.com/",
+    "email": "boatmusaddiq2007@gmail.com",
+    "telephone": "+91-87880 21245",
+    "address": { "@type": "PostalAddress", "addressCountry": "IN" },
+    "areaServed": "IN",
+    "priceRange": "₹₹"
+  }
+  </script>
+
+  <script>
+    // Safe helpers
+    const formatINR = n => {
+      try { return new Intl.NumberFormat('en-IN', { style:'currency', currency:'INR', maximumFractionDigits:0 }).format(Number(n)); }
+      catch(e){ return '₹' + Number(n).toLocaleString('en-IN'); }
+    };
+    const qs = (s,o=document) => o.querySelector(s);
+    const qsa = (s,o=document) => Array.from(o.querySelectorAll(s));
+
+    // Basic DOM elements (guarded)
+    const hamb = qs('#hamb');
+    const nav = qs('#nav');
+    if (hamb && nav) {
+      hamb.addEventListener('click', ()=>{
+        const open = !nav.classList.contains('open');
+        nav.classList.toggle('open', open);
+        hamb.setAttribute('aria-expanded', String(open));
+      });
+      qsa('nav a').forEach(a=>a.addEventListener('click', ()=> nav.classList.remove('open')));
+    }
+
+    // Reveal on scroll (fallback if IO not supported)
+    const revealEls = qsa('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{ if(e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+      }, { threshold: .1 });
+      revealEls.forEach(el=> io.observe(el));
+    } else { revealEls.forEach(el=> el.classList.add('show')); }
+
+    // Year
+    const yEl = qs('#year'); if (yEl) yEl.textContent = new Date().getFullYear();
+
+    // Populate Booking Outfit dropdown from cards (guarded)
+    const outfitSelect = qs('#formOutfit');
+    const cardEls = qsa('.card');
+    try {
+      if (outfitSelect && cardEls.length) {
+        // Avoid duplicates
+        const seen = new Set();
+        cardEls.forEach(c=>{
+          const name = String(c.dataset.name || '').trim();
+          const category = String(c.dataset.category || '').trim();
+          const price = Number(c.dataset.price || 0);
+          if (!name || seen.has(name)) return;
+          seen.add(name);
+          const opt = document.createElement('option');
+          opt.value = name; opt.textContent = `${name} (${formatINR(price)})`;
+          opt.dataset.price = price; opt.dataset.category = category;
+          outfitSelect.appendChild(opt);
+        });
+      }
+    } catch(err){ console.warn('Populate outfits failed', err); }
+
+    // Collection: search/filter/sort
+    const search = qs('#search');
+    const filterCategory = qs('#filterCategory');
+    const sortSel = qs('#sort');
+    const grid = qs('#grid');
+
+    function applyFilters(){
+      if (!grid) return;
+      const term = search ? search.value.trim().toLowerCase() : '';
+      const cat = filterCategory ? filterCategory.value : 'all';
+      const visible = [];
+      cardEls.forEach(card=>{
+        const name = (card.dataset.name||'').toLowerCase();
+        const category = card.dataset.category || '';
+        const matchText = !term || name.includes(term);
+        const matchCat = (cat === 'all') || (category === cat);
+        card.style.display = (matchText && matchCat) ? '' : 'none';
+        if (card.style.display !== 'none') visible.push(card);
+      });
+      // Sort visible and append
+      if (sortSel && visible.length) {
+        visible.sort((a,b)=>{
+          if (sortSel.value === 'asc') return Number(a.dataset.price) - Number(b.dataset.price);
+          if (sortSel.value === 'desc') return Number(b.dataset.price) - Number(a.dataset.price);
+          return 0;
+        });
+        visible.forEach(c=> grid.appendChild(c));
+      }
+    }
+    ['input','change'].forEach(evt=>{
+      if (search) search.addEventListener(evt, applyFilters);
+      if (filterCategory) filterCategory.addEventListener(evt, applyFilters);
+      if (sortSel) sortSel.addEventListener(evt, applyFilters);
+    });
+
+    // Wishlist (localStorage) with safety
+    const WKEY = 'rumasa_wishlist_v1';
+    function getWL(){ try{ return JSON.parse(localStorage.getItem(WKEY) || '[]') } catch(e){ console.warn('WL parse failed',e); return []; } }
+    function setWL(arr){ try{ localStorage.setItem(WKEY, JSON.stringify(arr || [])); } catch(e){ console.warn('WL save failed', e); } }
+
+    function updateHeartIcon(btn, isActive){
+      if (!btn) return;
+      if (isActive) btn.innerHTML = '<i class="fa-solid fa-heart"></i>';
+      else btn.innerHTML = '<i class="fa-regular fa-heart"></i>';
+    }
+
+    qsa('[data-action="wishlist"]').forEach(btn=>{
+      const card = btn.closest('.card'); if (!card) return;
+      const name = String(card.dataset.name || '');
+      const wl = new Set(getWL());
+      updateHeartIcon(btn, wl.has(name));
+      btn.addEventListener('click', ()=>{
+        const cur = new Set(getWL());
+        if (cur.has(name)) { cur.delete(name); updateHeartIcon(btn, false); }
+        else { cur.add(name); updateHeartIcon(btn, true); }
+        setWL([...cur]);
+      });
+    });
+
+    // Quick View Modal (delegated)
+    const quickModal = qs('#quickModal');
+    const quickContent = qs('#quickContent');
+    function openQuick(card){
+      if (!card || !quickModal || !quickContent) return;
+      const img = card.querySelector('img')?.getAttribute('src') || '';
+      const title = (card.querySelector('h3')?.textContent || '').trim();
+      const price = Number(card.dataset.price || 0);
+      const dataName = card.dataset.name || title.toLowerCase();
+      quickContent.innerHTML = `
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items:start">
+          <img src="${img}" alt="${title}" style="width:100%; border-radius: 12px; object-fit:cover" />
+          <div>
+            <h3 style="margin:.2rem 0 .4rem">${title}</h3>
+            <div style="font-weight:800; color: var(--maroon); font-size:1.1rem">${formatINR(price)}</div>
+            <p class="note" style="margin:.5rem 0 1rem">Premium fabric • Free dry‑clean • Deposit extra</p>
+            <div style="display:flex; gap:.5rem; flex-wrap:wrap">
+              <button class="btn btn-primary" id="bookThisBtn" data-name="${dataName}">Book This</button>
+              <button class="btn" id="qClose">Close</button>
+            </div>
+          </div>
+        </div>`;
+      quickModal.classList.add('open'); quickModal.setAttribute('aria-hidden','false');
+      // Close handler
+      const qClose = qs('#qClose'); if (qClose) qClose.addEventListener('click', closeQuickOnce);
+      quickModal.addEventListener('click', onBackdropQuick);
+      // Book this handler
+      const bookBtn = qs('#bookThisBtn');
+      if (bookBtn) bookBtn.addEventListener('click', ()=>{
+        const val = bookBtn.dataset.name || dataName;
+        if (outfitSelect) {
+          // find matching option
+          const opt = Array.from(outfitSelect.options).find(o=> o.value === val);
+          if (opt) { outfitSelect.value = opt.value; outfitSelect.dispatchEvent(new Event('change')); }
+        }
+        closeQuickOnce();
+        // smooth scroll to booking
+        const booking = qs('#booking'); if (booking) booking.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+    function closeQuickOnce(){ if (quickModal){ quickModal.classList.remove('open'); quickModal.setAttribute('aria-hidden','true'); quickModal.removeEventListener('click', onBackdropQuick); } }
+    function onBackdropQuick(e){ if (e.target === quickModal) closeQuickOnce(); }
+    qsa('[data-action="quick"]').forEach(btn=> btn.addEventListener('click', ()=> openQuick(btn.closest('.card'))));
+
+    // Size Guide Modal
+    const sizeModal = qs('#sizeModal');
+    if (qs('#openSizeGuide') && sizeModal) qs('#openSizeGuide').addEventListener('click', ()=>{ sizeModal.classList.add('open'); sizeModal.setAttribute('aria-hidden','false'); });
+    if (qs('#closeSize') && sizeModal) qs('#closeSize').addEventListener('click', ()=>{ sizeModal.classList.remove('open'); sizeModal.setAttribute('aria-hidden','true'); });
+    if (sizeModal) sizeModal.addEventListener('click', e=>{ if (e.target === sizeModal) { sizeModal.classList.remove('open'); sizeModal.setAttribute('aria-hidden','true'); }});
+
+    // Booking: date min = today
+    const rentalDate = qs('#rentalDate');
+    if (rentalDate){
+      const today = new Date(); const yyyy = today.getFullYear(); const mm = String(today.getMonth()+1).padStart(2,'0'); const dd = String(today.getDate()).padStart(2,'0');
+      rentalDate.min = `${yyyy}-${mm}-${dd}`;
+    }
+
+    // Live price summary
+    const catSel = qs('#formCategory');
+    const daysSel = qs('#days');
+    const sumRent = qs('#sumRent');
+    const sumDep = qs('#sumDep');
+    const sumTotal = qs('#sumTotal');
+
+    function recalc(){
+      try{
+        const opt = outfitSelect ? outfitSelect.selectedOptions[0] : null;
+        const base = opt ? Number(opt.dataset.price || 0) : 0;
+        const days = daysSel ? Number(daysSel.value || 1) : 1;
+        const factor = days === 1 ? 1 : (days === 3 ? 1.2 : 1.35);
+        const rent = Math.round(base * factor);
+        const deposit = Math.round(base * 1.5);
+        const total = rent + deposit;
+        if (sumRent) sumRent.textContent = formatINR(rent);
+        if (sumDep) sumDep.textContent = formatINR(deposit);
+        if (sumTotal) sumTotal.textContent = formatINR(total);
+      } catch(e){ console.warn('Recalc error', e); }
+    }
+    ['change','input'].forEach(evt=>{
+      if (outfitSelect) outfitSelect.addEventListener(evt, recalc);
+      if (daysSel) daysSel.addEventListener(evt, recalc);
+      if (catSel) catSel.addEventListener(evt, recalc);
+    });
+    recalc();
+
+    // Check Availability (demo)
+    const AKEY = 'rumasa_availability_demo_v1';
+    function getA(){ try{ return JSON.parse(localStorage.getItem(AKEY) || '{}'); } catch(e){ return {}; } }
+    function setA(obj){ try{ localStorage.setItem(AKEY, JSON.stringify(obj || {})); } catch(e){ console.warn('Save avail failed', e); } }
+
+    const checkBtn = qs('#checkAvailability');
+    if (checkBtn){ checkBtn.addEventListener('click', ()=>{
+      const outfit = outfitSelect ? outfitSelect.value : '';
+      const date = rentalDate ? rentalDate.value : '';
+      if(!outfit || !date){ alert('Please select an outfit and date.'); return; }
+      const days = daysSel ? Number(daysSel.value || 1) : 1;
+      const start = new Date(date); const end = new Date(start); end.setDate(start.getDate() + days);
+      const db = getA(); const bookings = db[outfit] || [];
+      const conflict = bookings.some(b=>{ const bs = new Date(b.start), be = new Date(b.end); return (start < be && end > bs); });
+      if(conflict) alert('Sorry, not available for those dates. Please try another date.');
+      else alert('Looks available! Submit the form to reserve.');
+    }); }
+
+    // Save demo booking when form submits (do not block actual submission)
+    const bookForm = qs('#bookForm');
+    if (bookForm){ bookForm.addEventListener('submit', ()=>{
+      try{
+        const outfit = outfitSelect ? outfitSelect.value : '';
+        const date = rentalDate ? rentalDate.value : '';
+        const days = daysSel ? Number(daysSel.value || 1) : 1;
+        if (!outfit || !date) return;
+        const start = new Date(date); const end = new Date(start); end.setDate(start.getDate() + days);
+        const db = getA(); db[outfit] = db[outfit] || []; db[outfit].push({ start: start.toISOString(), end: end.toISOString() }); setA(db);
+      } catch(e){ console.warn('Saving demo booking failed', e); }
+    }); }
+
+    // Back to top & simple scroll behavior
+    const toTop = qs('#toTop'); const wa = qs('#wa');
+    window.addEventListener('scroll', ()=>{
+      const y = window.scrollY || document.documentElement.scrollTop;
+      if (toTop) toTop.classList.toggle('hidden', y < 600);
+      if (wa) wa.style.transform = y > 120 ? 'translateY(0)' : 'translateY(0)';
+    });
+    if (toTop) toTop.addEventListener('click', ()=> window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Initial filter application
+    applyFilters();
+  </script>
+</body>
+</html>
